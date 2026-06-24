@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import HeaderBar from './components/HeaderBar';
 import Login from './components/Login';
 import Register from './components/Register';
@@ -9,7 +9,7 @@ import UpdateProduct from './components/UpdateProduct';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <HeaderBar />
         <Routes>
           <Route path="/" element={<Login />} />
@@ -18,7 +18,7 @@ function App() {
           <Route path="/add" element={<AddProduct />} />
           <Route path="/update" element={<UpdateProduct />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
